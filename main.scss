@@ -1,0 +1,147 @@
+$Dark-cyan: #19A2AE;
+$blue:#3E52A3;
+$Very-dark-desaturated: #2D3248;
+$Dark-gray:#6A6F81;
+
+@mixin center($top,$left) {
+    position: absolute;
+    top:$top;
+    left:$left;
+    transform: translate(-50%, -50%);
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 52.5%;
+}
+
+body{
+    background-color:$Dark-cyan;
+    font-family: 'Kumbh Sans', sans-serif;
+
+}
+
+.header{
+    height: 100vh;
+    width: 100vw;
+    font-size: 1.8rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.img{
+    height: 100rem;
+    width: 100rem;
+    position: absolute;
+    z-index: -10;
+
+}
+.img-top{
+    top: -46%;
+    left: -13%;
+}
+
+.img-bottom{
+    bottom: -41%;
+    right: -12%;
+}
+.cart-main{
+    @include center(50%,50%)
+}
+
+.cart{
+    width: 48rem;
+    height: 51rem;
+    background-color: white;
+    border-radius: 1rem;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    z-index: -8;
+}
+
+
+.card-pattern{
+    border-radius: 1rem 1rem 0% 0%;
+    width:100%;
+    height: 35%;
+    z-index: -7;
+}
+
+.circle{
+    width:15rem;
+    height: 15rem;
+    background-color:white;
+    border-radius: 70%;
+    @include center(35%,50%)
+
+}
+
+.cart-image{
+    width: 14rem;
+    @include center(35%,50%);
+    border-radius: 10rem;
+
+}
+
+.text-box{
+    @include center(63%, 50%);
+
+    h2{
+        font-size:2.6rem;
+        font-weight: 700;
+        span{
+            padding-left: 1rem;
+            color:$Dark-gray;
+            font-weight: 400;
+
+        }
+    }
+    h3{
+        padding-top:2rem ;
+        text-align: center;
+        color:$Dark-gray;
+        font-weight: 400;
+    }
+    
+}
+
+.line{
+    position: absolute;
+    top: 77%;
+    border-top: .1rem solid rgba($Dark-gray, 0.4);
+    width: 100%;
+}
+
+.flp{
+    
+    ul{
+        @include center(88%,49% );
+        display: flex;
+        text-align: center;
+        justify-content:center;
+        
+    }
+    li{
+        
+        list-style-type: none;
+        padding: 4rem;
+        font-size: 2.4rem;
+        font-weight: 700;
+        span{
+            display:block;
+            font-size: 1.4rem;
+            font-weight:400;
+            color: $Dark-gray;
+            padding-top:1rem ;
+            letter-spacing: .2rem;
+        }
+        
+    }
+}
